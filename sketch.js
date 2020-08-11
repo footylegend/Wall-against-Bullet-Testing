@@ -31,8 +31,7 @@ function setup() {
   
 
   wall.shapeColor="blue";
-
-  bullet.velocityX=speed;
+  
   bullet.shapeColor="white";
 
   damage=(0.5*weight*bullet.velocityX*bullet.velocityX)/(thickness*thickness*thickness);
@@ -43,7 +42,11 @@ function draw() {
   
   background("black");
 
-    if(bullet.x<400){
+   if(keyDown("space")){
+     bullet.velocityX=speed;
+   }
+  
+   if(bullet.x<400){
     bulletSound.play();
     }
 
